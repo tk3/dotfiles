@@ -1,3 +1,5 @@
+export EDITOR=vim
+
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
@@ -13,6 +15,14 @@ PS1='%D{%Y/%m/%d %H:%M:%S} $ '
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export GOPATH="$HOME/go"
+
+export PATH="$PATH:$HOME/.local/bin/go/bin"
+export PATH="$PATH:$GOPATH/bin"
+
 # Add .NET Core SDK tools
 export PATH="$PATH:$HOME/.dotnet/tools"
+
+# Add rbenv
+eval "$(~/.rbenv/bin/rbenv init - --no-rehash zsh)"
 
